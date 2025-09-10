@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -35,10 +36,5 @@ export default defineNuxtConfig({
   ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/image',
-    '@pinia/nuxt',
-    '@nuxt/fonts',
-    '@nuxtjs/supabase'
-  ],
+  modules: ['@netlify/nuxt','@nuxt/image', '@pinia/nuxt', '@nuxt/fonts', '@nuxtjs/supabase', '@netlify/nuxt'],
 })
