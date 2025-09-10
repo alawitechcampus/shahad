@@ -5,7 +5,7 @@ const show = ref(true);
 onMounted(() => {
   setTimeout(() => {
     show.value = false;
-  }, 200000);
+  }, 2200);
 });
 </script>
 

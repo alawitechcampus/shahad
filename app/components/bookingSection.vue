@@ -76,7 +76,7 @@ const sendToWhatsApp = () => {
 
   isLoading.value = true;
 
-  const phone = "966573556321";
+  const phone = "966561932041";
   const brideLine = isBride.value ? "\n💍 عروسة" : "";
   const message = `
 *طلب حجز موعد جديد* 📅
