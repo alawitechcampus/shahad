@@ -71,8 +71,7 @@ const openImage = (src) => {
               class="mySwiper rounded-xl overflow-hidden "
             )
               SwiperSlide(class="d-flex align-center justify-center flex-column")
-                v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/noon.jpg" width="100" height="100" densities="x1" format="webp")
+                NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/noon.jpg" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold نور بالألف
                 .rating
@@ -88,8 +87,7 @@ const openImage = (src) => {
                   | شغل مرتب ورهيب وجربت اكثر من لوك وكلها تجنن وان شاءلله مو اخر مرة
                 v-icon(color="pink") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
-                v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold أفنان
                 .rating
@@ -105,8 +103,7 @@ const openImage = (src) => {
                   | الف الف شكر على الشغل الي يبيض الوجه ياقلبي بناتنا كانو مرا مبسوطات على شغلكم وصراحه شي روعه تبارك الله والله يفتحلكم أبواب الرزق
                 v-icon(color="pink") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
-                v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold دعاء
                 .rating
@@ -122,8 +119,7 @@ const openImage = (src) => {
                   | ماشاء الله تبارك الله شغل مرتب وراقي 
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
-                v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold أسماء
                 .rating
@@ -139,8 +135,7 @@ const openImage = (src) => {
                   | مره شكرا على شغلك الرائع ماشاءلله تبارك الرحمن شعورنا ثابتة لاخر السهر
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
-                v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold ياسمين
                 .rating
@@ -156,8 +151,7 @@ const openImage = (src) => {
                   | الفنانة يلي فضل الشعر من يدها ثابت لاخر السهرة تسلم يدك شهد
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
-                v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="contain" height="contain" densities="x1" format="webp")
+                NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="contain" height="contain" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold أروى
                 .rating
@@ -263,11 +257,8 @@ const openImage = (src) => {
   }
 }
 .swiper-slide {
-  .v-avatar {
-    border: 2px solid #6c6c6c87;
-    img {
-      border-radius: 50%;
-    }
+  img {
+    border-radius: 50%;
   }
 }
 .rating {

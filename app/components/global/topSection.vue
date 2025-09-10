@@ -15,7 +15,7 @@ const isHome = () => {
         v-icon(color="orange-lighten-1") mdi-star
       NuxtLink(:to="'/'")
         v-avatar(size="90" class="mx-auto" color="#222222ff" :to="'/'")
-          NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" loading="lazy" densities="x1 x2" format="webp" alt="Logo" width="80" )
+          v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" loading="lazy" densities="x1 x2" format="webp" alt="Logo" width="80" )
       NuxtLink(:to="'/'" class="text-decoration-none")  
         v-card-title(class="pb-0") Shahad_Hairstylest
       .location
