@@ -5,14 +5,14 @@ const show = ref(true);
 onMounted(() => {
   setTimeout(() => {
     show.value = false;
-  }, 2000);
+  }, 200000);
 });
 </script>
 
 <template lang="pug">
   .background(v-if="show")
     .loading
-      NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" loading="lazy" densities="x1 x2" format="webp" alt="Logo" width="120" )
+      v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" loading="lazy" densities="x1 x2" format="webp" alt="Logo" width="120" )
       .loading-text
         h1 Shahed_Hairstylest
         span Loading...
@@ -28,9 +28,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   z-index: 1000; /* تأكد إنها فوق أي عنصر ثاني */
-  transition: opacity 0.5s ease-in-out;
   .loading {
-    position: fixed;
     inset: 0;
     background: rgb(0, 0, 0); /* غيّر اللون حسب ثيمك */
     display: flex;
