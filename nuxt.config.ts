@@ -22,6 +22,9 @@ export default defineNuxtConfig({
       supabaseKey: process.env.SUPABASE_KEY,
     }
   },
+  image: {
+    domains: ['bgtsamrwtvtohxnkjugx.supabase.co']
+  },
   supabase: {
     redirect: false, // disable redirect handling
   },

@@ -72,7 +72,7 @@ const openImage = (src) => {
             )
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/noon.jpg" width="100" height="100")
+                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/noon.jpg" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold نور بالألف
                 .rating
@@ -89,7 +89,7 @@ const openImage = (src) => {
                 v-icon(color="pink") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" )
+                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold أفنان
                 .rating
@@ -106,7 +106,7 @@ const openImage = (src) => {
                 v-icon(color="pink") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100")
+                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold دعاء
                 .rating
@@ -123,7 +123,7 @@ const openImage = (src) => {
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100")
+                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold أسماء
                 .rating
@@ -140,7 +140,7 @@ const openImage = (src) => {
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100")
+                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold ياسمين
                 .rating
@@ -157,7 +157,7 @@ const openImage = (src) => {
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/1chat.jpg" width="contain" height="contain")
+                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/1chat.jpg" width="contain" height="contain" densities="x1" format="webp")
                 .text-box
                   h3.mb-0.font-weight-bold أروى
                 .rating
