@@ -5,6 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const modules = [Navigation, Pagination, Autoplay];
 
+const loading = ref(true);
 const tabs = ref("one");
 const dialog = ref(false);
 const selectedItem = ref("");
@@ -32,30 +33,50 @@ const openImage = (src) => {
 
     v-tabs-window(v-model="tabs")
       v-tabs-window-item(value="protofolio")
-        v-card(color="#ffffff66" flat class="pa-1 ma-1 mb-2  d-flex flex-wrap" rounded="lg")
+        v-card(color="#ffffff66" flat class="img-card pa-1 ma-1 mb-2  d-flex flex-wrap" rounded="lg" max-height="316px")
           .img-box(class="d-flex flex-wrap" style="gap: 3.3px;")
             .box
-              NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp1.png" width="contain" height="150" densities="x1" format="webp" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-1.mp4')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp10.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-10%20(1).mp4')")
             .box
-              NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-2.jpg" width="contain" height="150" densities="x1" format="webp" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-2.jpg')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp1.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-1.mp4')")
             .box
-              NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp2.png" width="contain" height="150" densities="x1" format="webp" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-2.mp4')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp6.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-2.jpg')")
             .box
-              NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-4.jpg" width="contain" height="150" densities="x1" format="webp" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-4.jpg')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp2.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-2.mp4')")
             .box
-              NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-5.jpg" width="contain" height="150" densities="x1" format="webp" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-5.jpg')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp7.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-4.jpg')")
             .box
-              NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp3.png" width="contain" height="150" densities="x1" format="webp" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-3.mp4')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp8.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-5.jpg')")
             .box
-              NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-6.jpg" width="contain" height="150" densities="x1" format="webp" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-6.jpg')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp11.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/tham11.jpg')")
             .box
-              NuxtImg(src="/video/thamp4.png" width="86" height="150" densities="x1" format="webp" @click="openImage('/video/vid-4.mp4')")
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp3.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-3.mp4')")
+            .box
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp9.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/box-img-6.jpg')")
+            .box
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp4.png" alt="Shahad-Hairstylest" width="84" height="150" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/videos/vid-4.mp4')")
+            .box
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp12.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp12.jpg')")
+            .box
+              v-skeleton-loader(v-if="loading" type="image" width="84" height="150" class="rounded-lg")
+              v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/thamp13.png" alt="Shahad-Hairstylest" @load="loading = false" @click="openImage('https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/tham13.jpg')")
       v-dialog(v-model="dialog" width="340px" max-height="640px")
         v-card(color="#fff" flat class="pa-4 ma-0" rounded="lg")
           ClientOnly(v-if="isVideo")
             video(width="100%" height="100%" preload="metadata" muted autoplay loop controls playsinline)
               source(:src="selectedItem" type="video/mp4")
-          NuxtImg(v-else :src="selectedItem" width="100%" height="100%" format="webp" loading="lazy")
+          v-img(v-else :src="selectedItem" width="100%" height="100%" loading="lazy" alt="Shahad-Hairstylest")
         v-card-actions
           v-btn(text @click="dialog = false" icon) 
             v-icon(size="25") mdi-close
@@ -72,7 +93,7 @@ const openImage = (src) => {
             )
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/noon.jpg" width="100" height="100" densities="x1" format="webp")
+                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/noon.jpg" width="100" height="100" alt="Shahad-Hairstylest")
                 .text-box
                   h3.mb-0.font-weight-bold نور بالألف
                 .rating
@@ -89,7 +110,7 @@ const openImage = (src) => {
                 v-icon(color="pink") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" alt="Shahad-Hairstylest")
                 .text-box
                   h3.mb-0.font-weight-bold أفنان
                 .rating
@@ -106,7 +127,7 @@ const openImage = (src) => {
                 v-icon(color="pink") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" alt="Shahad-Hairstylest")
                 .text-box
                   h3.mb-0.font-weight-bold دعاء
                 .rating
@@ -123,7 +144,7 @@ const openImage = (src) => {
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" alt="Shahad-Hairstylest")
                 .text-box
                   h3.mb-0.font-weight-bold أسماء
                 .rating
@@ -140,7 +161,7 @@ const openImage = (src) => {
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" densities="x1" format="webp")
+                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" width="100" height="100" alt="Shahad-Hairstylest")
                 .text-box
                   h3.mb-0.font-weight-bold ياسمين
                 .rating
@@ -157,7 +178,7 @@ const openImage = (src) => {
                 v-icon(color="yellow") mdi-heart
               SwiperSlide(class="d-flex align-center justify-center flex-column")
                 v-avatar(size="70" class="ma-2" )
-                  NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/1chat.jpg" width="contain" height="contain" densities="x1" format="webp")
+                  v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/1chat.jpg" width="100" height="100" alt="Shahad-Hairstylest")
                 .text-box
                   h3.mb-0.font-weight-bold أروى
                 .rating
@@ -189,25 +210,26 @@ const openImage = (src) => {
                   th.text-center الخدمة
               tbody
                 tr
-                  td.text-center 150 ريال
-                  td.text-center تسريحة شعر عادي
+                  td.text-center 1000 ريال
+                  td.text-center(style="font-size: 14px; font-weight: bold")  عروسة فرح
+                    br
+                    span(style="font-size: 12px; font-weight: normal") تسريحة العروسة تركيب الطرحة واكسسوار الشعر
                 tr
-                  td.text-center 200 ريال
-                  td.text-center تسريحة شعر مع مكياج خفيف
+                  td.text-center 700 ريال
+                  td.text-center(style="font-size: 14px; font-weight: bold")  عروسة ملكة
+                    br
+                    span(style="font-size: 12px; font-weight: normal") تسريحة العروسة تركيب اكسسوار الشعر
                 tr
-                  td.text-center 300 ريال
-                  td.text-center تسريحة شعر مع مكياج كامل
-                tr
-                  td.text-center 400 ريال
-                  td.text-center تسريحة شعر مع مكياج كامل + رموش + أظافر 
-                tr
-                  td.text-center 500 ريال
-                  td.text-center تسريحة عروس كاملة (شعر + مكياج + رموش + أظافر + جلسة تصوير)
+                  td.text-center 250-500 ريال
+                  td.text-center(style="font-size: 14px; font-weight: bold")   سهرة
+                    br
+                    span(style="font-size: 12px; font-weight: normal") التساريح ب 250 ويزيد اذا الشعر كان طويل أوكثيف الحد من 250 الى 500
+
       v-tabs-window-item(value="four")
         v-card(color="#ffffff66" rounded="xl"  flat class="d-flex align-center justify-center flex-column pa-4 ma-2 about")
           h3(style="font-family: cairo") شهد الحبشي
           .text-box(class="text-center mt-2" style="font-family: cairo; font-size: 17px; color: #000000; font-weight: 600;")
-            | خبيرة تجميل وتسريحات شعر، أقدم لكِ أجمل الإطلالات التي تناسب جميع المناسبات. احجزي موعدك الآن لتحصلي على إطلالة ساحرة وجذابة.
+            |  أقدم لكِ أجمل الإطلالات التي تناسب جميع المناسبات. احجزي موعدك الآن لتحصلي على إطلالة ساحرة وجذابة.
           button(color="#eee" class="mt-4 btn bok-button" @click="$router.push('/booking')") إحجزي موعد
 </template>
 
@@ -219,7 +241,7 @@ const openImage = (src) => {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 86px;
+      width: 84px;
       height: 150px;
       border-radius: 12px;
       overflow: hidden;
@@ -227,6 +249,28 @@ const openImage = (src) => {
         border-radius: 12px;
         padding: 1px;
       }
+    }
+  }
+  .img-card {
+    overflow: auto;
+    scrollbar-width: 1px;
+    &::-webkit-scrollbar {
+      width: 5px;
+      position: absolute;
+      left: -10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f0f0f035;
+      border-radius: 10px;
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #f0f0f077;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #cdcdcd;
     }
   }
 }
@@ -261,6 +305,9 @@ const openImage = (src) => {
     width: 2px;
     background-color: #f4f4f4;
   }
+}
+.v-img__img--contain {
+  object-fit: cover;
 }
 .swiper-slide {
   .v-avatar {
@@ -298,7 +345,7 @@ const openImage = (src) => {
   }
 }
 .about {
-  height: 300px
+  height: 300px;
 }
 button {
   position: relative;

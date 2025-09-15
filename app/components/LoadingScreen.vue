@@ -12,7 +12,7 @@ onMounted(() => {
 <template lang="pug">
   .background(v-if="show")
     .loading
-      NuxtImg(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" loading="lazy" densities="x1 x2" format="webp" alt="Logo" width="120" )
+      v-img(src="https://bgtsamrwtvtohxnkjugx.supabase.co/storage/v1/object/public/images/logo.png" loading="lazy" alt="Logo" width="150" )
       .loading-text
         h1 Shahed_Hairstylest
         span Loading...

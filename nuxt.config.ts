@@ -40,5 +40,12 @@ export default defineNuxtConfig({
   ],
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@netlify/nuxt','@nuxt/image', '@pinia/nuxt', '@nuxt/fonts', '@nuxtjs/supabase', '@netlify/nuxt'],
+  gtag: {
+    id: 'G-MNDERQY5BM',  // تحط هنا Measurement ID من GA4
+    enabled: process.env.NODE_ENV === 'production',  // مثلاً تفعل فقط في الإنتاج
+    config: {
+      anonymize_ip: true  // خيار مثلاً لإخفاء جزء من الـ IP لو تحب الخصوصية
+    }
+  },
+  modules: ['nuxt-gtag', '@netlify/nuxt', '@nuxt/image', '@pinia/nuxt', '@nuxt/fonts', '@nuxtjs/supabase', '@netlify/nuxt', 'nuxt-gtag'],
 })

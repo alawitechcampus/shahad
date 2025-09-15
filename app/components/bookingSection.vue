@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
 
-// الحقول
 const name = ref("");
 const phoneNumber = ref("");
 const region = ref("");
@@ -11,7 +10,6 @@ const time = ref(""); // "HH:mm"
 const people = ref("");
 const isBride = ref(false);
 
-// dialogs
 const datePickerDialog = ref(false);
 const timePickerDialog = ref(false);
 
@@ -22,8 +20,12 @@ const snackbar = ref(false);
 const snackbarMessage = ref("");
 const snackbarColor = ref("red");
 
+// chekbox
+const importantDialog = ref(false);
+const agreed = ref(false);
+
 // خيارات
-const regions = ["مكة", "جدة", "الطائف", "حدة", "الجموم", "الرياض", "المدينة"];
+const regions = ["مكة", "جدة", "الطائف", "المدينة", "الجموم", "الرياض", "المدينة"];
 const peopleOptions = Array.from({ length: 15 }, (_, i) => i + 1);
 
 // القواعد
@@ -103,9 +105,9 @@ const sendToWhatsApp = () => {
 
 <template lang="pug">
 v-container
-  v-card(elevation="4" class="pa-3 rounded-xl" color="#ffffffee")
-    v-card-title.text-h6.text-center(style="font-family: cairo; font-weight: bold") إحجزي موعد
-    v-card-text
+  v-card(elevation="4" class="px-3 pt-3 rounded-xl" color="#ffffffee")
+    v-card-title.text-h6.text-center.pa-0(style="font-family: cairo; font-weight: bold") إحجزي موعد
+    v-card-text.pb-0
       v-form(ref="bookingForm" class="form")
         v-text-field(
           v-model="name"
@@ -187,16 +189,43 @@ v-container
             label="عروسة"
             color="pink"
           )
+      v-checkbox(
+        v-model="agreed"
+        :rules="[rules.required]"
+        @click="importantDialog = true"
+        color="primary"
+        prepend-icon="mdi-alert-rhombus"
+      )
+        template(v-slot:label)
+          span
+            |  قبل تحجزي
+            a(href="javascript:void(0)" @click="importantDialog = true" style="color: #1976d2; text-decoration: underline;")  معلومات تهمك  
 
-    v-card-actions.justify-center
+    v-card-actions.justify-center.pa-0.my-0
       v-btn(
-        class="send-button px-6"
+        class="send-button px-6 py-0 my-0"
         color="primary"
         :loading="isLoading"
         @click="sendToWhatsApp"
         style="font-family: cairo; font-weight: bold"
       ) أرسل الطلب عبر واتساب
         v-icon.right mdi-whatsapp
+
+  v-dialog(v-model="importantDialog" max-width="400" persistent)
+    v-card
+      v-card-title.text-h6(style="font-family: cairo; font-weight: bold") 📌 معلومات تهمك
+      v-card-text(style="font-family: cairo; font-size: 14px; line-height: 1.6;")
+        | - تاكيد الموعد بعربون يحدد حسب العدد للسهرة اقل عدد للحجز 3 اشخاص في حال التاكيد والغت الحجز وحده يتم الغاء الحجز كامل بدون استرجاع العربون او يتم  دفع قيمة تسريحة الشخص الثالث 300 ريال
+        br
+        | - رسوم المواصلات يتم تحديدها على حسب الموقع. 
+        br
+        | - الاكستنشن ما اركب اكستنشن  استشور شعرك واجهزلك مكان التركيب ووقت الكبس اخليك انتي بس تكبسه بالشعر 
+        br
+        | - في حالة وجود عروسة، يرجى إبلاغنا مسبقًا للتجهيز.
+        br
+        | - في حال وجود أي استفسار، لا تترددي في التواصل معنا عبر الواتساب.
+      v-card-actions.justify-end
+        v-btn(color="primary" text @click="importantDialog = false") موافق
 
   v-snackbar(v-model="snackbar" :color="snackbarColor" timeout="3000" location="top")
     | {{ snackbarMessage }}
